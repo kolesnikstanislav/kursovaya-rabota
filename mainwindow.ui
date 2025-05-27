@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>317</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Калькулятор Калорий</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelWeight">
+        <property name="text">
+         <string>Вес (кг):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEditWeight"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelHeight">
+        <property name="text">
+         <string>Рост (см):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEditHeight"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelAge">
+        <property name="text">
+         <string>Возраст:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEditAge"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelGender">
+        <property name="text">
+         <string>Пол:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBoxGender">
+        <item>
+         <property name="text">
+          <string>Мужской</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Женский</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="labelActivity">
+        <property name="text">
+         <string>Активность:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBoxActivity">
+        <item>
+         <property name="text">
+          <string>Минимальная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Слабая</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Умеренная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Высокая</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Экстремальная</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="labelFormula">
+        <property name="text">
+         <string>Формула:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QComboBox" name="comboBoxFormula">
+        <item>
+         <property name="text">
+          <string>Mifflin-St Jeor</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Harris-Benedict</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="buttonCalculate">
+      <property name="text">
+       <string>Рассчитать</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelResult">
+      <property name="text">
+       <string>Калории: 0</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidgetHistory"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="buttonSave">
+        <property name="text">
+         <string>Сохранить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonLoad">
+        <property name="text">
+         <string>Загрузить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonSwitchTheme">
+        <property name="text">
+         <string>Сменить тему</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
