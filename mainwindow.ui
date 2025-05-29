@@ -2,173 +2,112 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>317</width>
-    <height>485</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Калькулятор Калорий</string>
-  </property>
+  <property name="geometry"><rect><x>0</x><y>0</y><width>600</width><height>750</height></rect></property>
+  <property name="windowTitle"><string>Калькулятор калорий</string></property>
+
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+
+    <!-- Основной блок -->
     <item>
      <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="labelWeight">
-        <property name="text">
-         <string>Вес (кг):</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEditWeight"/>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="labelHeight">
-        <property name="text">
-         <string>Рост (см):</string>
-        </property>
-       </widget>
-      </item>
+
+      <item row="0" column="0"><widget class="QLabel" name="labelName"><property name="text"><string>Имя:</string></property></widget></item>
+      <item row="0" column="1"><widget class="QLineEdit" name="nameEdit"/></item>
+
+      <item row="1" column="0"><widget class="QLabel" name="labelGender"><property name="text"><string>Пол (M/F):</string></property></widget></item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEditHeight"/>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="labelAge">
-        <property name="text">
-         <string>Возраст:</string>
-        </property>
+       <widget class="QComboBox" name="genderBox">
+        <item><property name="text"><string>M</string></property></item>
+        <item><property name="text"><string>F</string></property></item>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEditAge"/>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="labelGender">
-        <property name="text">
-         <string>Пол:</string>
-        </property>
+
+      <item row="2" column="0"><widget class="QLabel" name="labelAge"><property name="text"><string>Возраст:</string></property></widget></item>
+      <item row="2" column="1"><widget class="QLineEdit" name="ageEdit"/></item>
+
+      <item row="3" column="0"><widget class="QLabel" name="labelWeight"><property name="text"><string>Вес (кг):</string></property></widget></item>
+      <item row="3" column="1"><widget class="QLineEdit" name="weightEdit"/></item>
+
+      <item row="4" column="0"><widget class="QLabel" name="labelHeight"><property name="text"><string>Рост (см):</string></property></widget></item>
+      <item row="4" column="1"><widget class="QLineEdit" name="heightEdit"/></item>
+
+      <item row="5" column="0"><widget class="QLabel" name="labelActivity"><property name="text"><string>Уровень активности:</string></property></widget></item>
+      <item row="5" column="1"><widget class="QComboBox" name="activityBox"/></item>
+
+      <item row="6" column="0"><widget class="QLabel" name="labelFormula"><property name="text"><string>Формула расчета:</string></property></widget></item>
+      <item row="6" column="1"><widget class="QComboBox" name="formulaBox"/></item>
+
+      <item row="7" column="0"><widget class="QLabel" name="labelLeanMass"><property name="text"><string>Мышечная масса (кг):</string></property></widget></item>
+      <item row="7" column="1"><widget class="QLineEdit" name="leanMassEdit"/></item>
+
+      <item row="8" column="0"><widget class="QLabel" name="labelGoal"><property name="text"><string>Цель питания:</string></property></widget></item>
+      <item row="8" column="1">
+       <widget class="QComboBox" name="goalBox">
+        <item><property name="text"><string>Похудение</string></property></item>
+        <item><property name="text"><string>Поддержание</string></property></item>
+        <item><property name="text"><string>Набор массы</string></property></item>
        </widget>
       </item>
-      <item row="3" column="1">
-       <widget class="QComboBox" name="comboBoxGender">
-        <item>
-         <property name="text">
-          <string>Мужской</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Женский</string>
-         </property>
-        </item>
+
+      <item row="9" column="0"><widget class="QLabel" name="labelAdjust"><property name="text"><string>Изменение калорий (%):</string></property></widget></item>
+      <item row="9" column="1">
+       <widget class="QSpinBox" name="adjustSpin">
+        <property name="minimum"><number>-50</number></property>
+        <property name="maximum"><number>50</number></property>
+        <property name="value"><number>0</number></property>
        </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="labelActivity">
-        <property name="text">
-         <string>Активность:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QComboBox" name="comboBoxActivity">
-        <item>
-         <property name="text">
-          <string>Минимальная</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Слабая</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Умеренная</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Высокая</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Экстремальная</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="labelFormula">
-        <property name="text">
-         <string>Формула:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1">
-       <widget class="QComboBox" name="comboBoxFormula">
-        <item>
-         <property name="text">
-          <string>Mifflin-St Jeor</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Harris-Benedict</string>
-         </property>
-        </item>
-       </widget>
-      </item>
+
      </layout>
     </item>
+
     <item>
-     <widget class="QPushButton" name="buttonCalculate">
-      <property name="text">
-       <string>Рассчитать</string>
-      </property>
+     <widget class="QPushButton" name="calculateButton">
+      <property name="text"><string>Рассчитать суточную норму</string></property>
      </widget>
     </item>
+
     <item>
-     <widget class="QLabel" name="labelResult">
-      <property name="text">
-       <string>Калории: 0</string>
-      </property>
+     <widget class="QLabel" name="resultLabel">
+      <property name="text"><string>Суточная норма калорий:</string></property>
      </widget>
     </item>
+
+    <!-- Блок приёмов пищи -->
     <item>
-     <widget class="QTableWidget" name="tableWidgetHistory"/>
+     <widget class="QGroupBox" name="mealGroup">
+      <property name="title"><string>Калорийность приёмов пищи</string></property>
+      <layout class="QFormLayout" name="mealLayout">
+
+       <item row="0" column="0"><widget class="QLabel" name="labelBreakfast"><property name="text"><string>Завтрак:</string></property></widget></item>
+       <item row="0" column="1"><widget class="QTextEdit" name="breakfastEdit"/></item>
+
+       <item row="1" column="0"><widget class="QLabel" name="labelLunch"><property name="text"><string>Обед:</string></property></widget></item>
+       <item row="1" column="1"><widget class="QTextEdit" name="lunchEdit"/></item>
+
+       <item row="2" column="0"><widget class="QLabel" name="labelSnack"><property name="text"><string>Полдник:</string></property></widget></item>
+       <item row="2" column="1"><widget class="QTextEdit" name="snackEdit"/></item>
+
+       <item row="3" column="0"><widget class="QLabel" name="labelDinner"><property name="text"><string>Ужин:</string></property></widget></item>
+       <item row="3" column="1"><widget class="QTextEdit" name="dinnerEdit"/></item>
+
+      </layout>
+     </widget>
     </item>
+
     <item>
-     <layout class="QHBoxLayout" name="buttonLayout">
-      <item>
-       <widget class="QPushButton" name="buttonSave">
-        <property name="text">
-         <string>Сохранить</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="buttonLoad">
-        <property name="text">
-         <string>Загрузить</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="buttonSwitchTheme">
-        <property name="text">
-         <string>Сменить тему</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="mealCalcButton">
+      <property name="text"><string>Посчитать калории по еде</string></property>
+     </widget>
     </item>
+
+    <item>
+     <widget class="QLabel" name="foodResultLabel">
+      <property name="text"><string/></property>
+     </widget>
+    </item>
+
    </layout>
   </widget>
  </widget>
